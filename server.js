@@ -13,17 +13,27 @@ const hbs = exphbs.create({
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 
-app.get('/', ((req, res) => {
-    res.sendFile(__dirname + '/index.html')
-}))
+app.use(express.static('public'))
 
-app.get('/about', ((req, res) => {
-    res.sendFile(__dirname + '/about.html')
-}))
+app.use('/', require('./routes/index'))
+app.use('/home', require('./routes/home'))
+app.use('/about', require('./routes/about'))
 
-app.get('/home', ((req, res) => {
-    res.sendFile(__dirname + '/home.html')
-}))
+// app.get('/', ((req, res) => {
+//     res.sendFile(__dirname + '/index.html')
+// }))
+
+// app.get('/about', ((req, res) => {
+//     res.sendFile(__dirname + '/about.html')
+// }))
+
+// app.get('/home', ((req, res) => {
+//     res.sendFile(__dirname + '/home.html')
+// }))
+
+// app.get('/signup', ((req, res) => {
+//     res.sendFile(__dirname + '/signup.html')
+// }))
 
 
 
