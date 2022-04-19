@@ -4,6 +4,6 @@ const path = require('path')
 
 router
     .route('/')
-    .get((req, res) => res.sendFile(path.resolve('index.html')))
+    .get((req, res) => res.sendFile(path.resolve('views/index.html')))
 
 module.exports = router
