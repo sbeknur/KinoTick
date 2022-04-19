@@ -2,7 +2,7 @@
 
 body {
    margin: 0;
-   font-size: 20px;
+   font-size: 16px;
    font-family: 'Montserrat', sans-serif;
    background-color: rgb(255, 255, 255);
 }
@@ -32,6 +32,11 @@ a {
    text-decoration: none;
    text-transform: uppercase;
    color: black;
+   transition: all linear 0.15s;
+}
+
+a:hover {
+   color: #D32F2F;
 }
 
 form {
@@ -44,6 +49,8 @@ form {
    margin: 0 auto;
    padding: 0 15px;
 }
+
+/*HEADER TOP*/
 
 .header__top {
    height: 60px;
@@ -61,31 +68,34 @@ form {
    font-weight: 700;
 }
 
+/*NAV*/
+
 .nav__inner {
    display: flex;
 }
 
 .nav__link {
    margin-left: 20px;
-   font-weight: 500;
+   font-size: 18px;
+   font-weight: 600;
 }
 
-.header__bottom {
-   background-color: rgb(46, 46, 46);
-}
+/*BUTTON*/
 
-.header__inner__bottom {
-   margin: 0 auto;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 15px 0;
-}
-
-select {
-   padding: 4px 10px;
+.btn {
+   padding: 10px 20px;
+   border: 1px solid #D32F2F;
    border-radius: 4px;
-   border-color: rgb(194, 48, 48);
+   color: white;
+   text-transform: uppercase;
    font-family: 'Montserrat', sans-serif;
-   font-weight: 500;
+   font-weight: 600;
+   background-color: #D32F2F;
+   transition: all linear 0.15s;
+}
+
+
+
+button:hover {
+   background-color: #F44336;
 }
