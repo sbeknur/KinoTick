@@ -15,9 +15,10 @@ app.set('view engine', 'hbs')
 
 app.use(express.static('public'))
 
-app.use('/', require('./routes/index'))
-app.use('/home', require('./routes/home'))
-app.use('/about', require('./routes/about'))
+app.use('/', require('./routes/indexRouter'))
+app.use('/about', require('./routes/aboutRouter'))
+app.use('/signup', require('./routes/signupRouter'))
+app.use('/login', require('./routes/loginRouter'))
 
 // app.get('/', ((req, res) => {
 //     res.sendFile(__dirname + '/index.html')

@@ -4,37 +4,69 @@
 <head>
   <meta charset="UTF-8">
   <title>KinoTick - Покупа билетов</title>
-  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
-<body style="margin: 0; padding: 0; box-sizing: border-box;">
-  <header style="background-color: #1f1f1f; height: 72px; display: flex; align-items: center;">
-    <div class="container" style="max-width: 1150px; width: 100%; padding: 0 15px;">
-      <nav class="header__nav">
-        <ul style="display: flex; list-style-type: none; margin: 0; font-family: sans-serif;">
-          <li>
-            <a href="home" style="text-decoration: none; color: white; text-transform: uppercase;">
-              <h4>Home</h4>
-            </a>
-          </li>
-          <li>
-            <a href="about" style="text-decoration: none; color: white; text-transform: uppercase;">
-              <h4>About Us</h4>
-            </a>
-          </li>
-          <li>
-            <a href="home" style="text-decoration: none; color: white; text-transform: uppercase;">
-              <h4>Home</h4>
-            </a>
-          </li>
-          <li>
-            <a href="home" style="text-decoration: none; color: white; text-transform: uppercase;">
-              <h4>Home</h4>
-            </a>
-          </li>
-        </ul>
-      </nav>
+<body>
+  <header class="header__top">
+    <div class="container">
+      <div class="header__inner__top">
+        <div class="header__logo">
+          <a href="/">KINOTICK</a>
+        </div>
+        <nav class="header__nav nav">
+          <ul class="nav__inner">
+            <li class="nav__link">
+              <a href="about">About Us</a>
+            </li>
+            <li class="nav__link">
+              <a href="signup">Sign Up</a>
+            </li>
+            <li class="nav__link">
+              <a href="login">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
+
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__inner__bottom">
+        <form action="">
+          <select name="city" id="city">
+            <option value="Nur-Sultan" selected>Nur-Sultan</option>
+            <option value="Almaty">Almaty</option>
+            <option value="Kokshetau">Kokshetau</option>
+            <option value="Shymkent">Shymkent</option>
+          </select>
+        </form>
+
+        <form action="">
+          <select name="adress" id="adress">
+            <option value="Kabanbay" selected>Kabanbay</option>
+            <option value="Momyshuly">Momyshuly</option>
+            <option value="Mangilik">Mangilik</option>
+          </select>
+        </form>
+
+        <form action="">
+          <select name="film" id="film">
+            <option value="Spider-man 2" selected>Spider-man 2</option>
+            <option value="Morbius">Morbius</option>
+            <option value="Sonic">Sonic</option>
+          </select>
+        </form>
+
+        <button>By tickets</button>
+      </div>
+    </div>
+  </div>
+
+
   <main></main>
   <footer></footer>
   </div>
