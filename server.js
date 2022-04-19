@@ -20,39 +20,6 @@ app.use('/about', require('./routes/aboutRoute'))
 app.use('/signup', require('./routes/signupRoute'))
 app.use('/login', require('./routes/loginRoute'))
 
-// app.get('/', ((req, res) => {
-//     res.sendFile(__dirname + '/index.html')
-// }))
-
-// app.get('/about', ((req, res) => {
-//     res.sendFile(__dirname + '/about.html')
-// }))
-
-// app.get('/home', ((req, res) => {
-//     res.sendFile(__dirname + '/home.html')
-// }))
-
-// app.get('/signup', ((req, res) => {
-//     res.sendFile(__dirname + '/signup.html')
-// }))
-
-
-
-// async function start() {
-//     try {
-//         await mongoose.connect('', {
-//             useNewUrlParser: true,
-//             useFindAndModify: false
-//         })
-//     app.listen(port, () =>
-//     console.log(`App listening at http://localhost:${port}`)
-//     );
-//     } catch (e) {
-//         console.log(e)
-//     }
-// }
-
-// start()
 
 app.listen(port, () =>
     console.log(`App listening at http://localhost:${port}`)
