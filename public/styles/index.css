@@ -1,31 +1,25 @@
-/*HEADER BOTTOM*/
-.header__bottom {
-   background-color: rgb(46, 46, 46);
-}
-
-.header__inner__bottom {
-   margin: 0 auto;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 15px 0;
-}
-
-select {
-   padding: 10px 10px;
-   min-width: 100px;
-   border-radius: 4px;
-   font-family: 'Montserrat', sans-serif;
-   font-weight: 500;
-   transition: all linear 0.15s;
-}
-
-select:hover {
-   background-color: rgb(225, 225, 225);
-}
-
 .films {
-   margin: 100px auto;
+   margin: 0 auto 100px auto;
+}
+
+.films__header {
+   display: flex;
+   color: white;
+   margin-top: 50px;
+   margin-bottom: 40px;
+   font-size: 24px;
+   align-items: center;
+   line-height: 0.6;
+}
+
+.films__header span {
+   font-weight: normal;
+   margin-right: 5px;
+}
+
+.films__header p {
+   line-height: 0.6;
+   color: rgb(197, 197, 197);
 }
 
 .films__inner {
@@ -34,12 +28,17 @@ select:hover {
    grid-gap: 50px 30px;
 }
 
-.card__film {
+.films__inner li {
+   flex: 1;
+   list-style: none;
    display: flex;
    text-align: center;
    flex-direction: column;
    text-align: center;
    width: 218px;
+   border-radius: 5px;
+
+   box-shadow: 5px 20px 50px #000;
 }
 
 .card__info {
@@ -52,6 +51,8 @@ select:hover {
 }
 
 .card__name {
+   padding: 0px 5px;
+   color: white;
    text-align: left;
    font-weight: 600;
    margin-bottom: 15px;
