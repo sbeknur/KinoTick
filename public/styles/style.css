@@ -4,7 +4,7 @@ body {
    margin: 0;
    font-size: 16px;
    font-family: 'Montserrat', sans-serif;
-   background-color: rgb(255, 255, 255);
+   background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
 }
 
 *,
@@ -36,7 +36,7 @@ a {
 }
 
 a:hover {
-   color: #D32F2F;
+   color: #6d44b8;
 }
 
 form {
@@ -54,6 +54,10 @@ form {
 
 .header__top {
    height: 60px;
+   background-color: rgb(255, 255, 255);
+   position: fixed;
+   top: 0;
+   width: 100%;
 }
 
 .header__inner__top {
@@ -66,6 +70,31 @@ form {
 .header__logo {
    font-size: 30px;
    font-weight: 700;
+}
+
+/*HEADER BOTTOM*/
+.header__bottom {
+   margin-top: 60px;
+   background-color: rgb(0, 0, 0);
+   transition: all linear 0.15s;
+}
+
+.header__inner__bottom {
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px 0;
+}
+
+select {
+   padding: 10px 10px;
+   min-width: 100px;
+   border-radius: 4px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   transition: all linear 0.15s;
+   background-color: #ffffff;
 }
 
 /*NAV*/
@@ -84,18 +113,19 @@ form {
 
 .btn {
    padding: 10px 20px;
-   border: 1px solid #D32F2F;
+   border: 1px solid #573b8a;
    border-radius: 4px;
-   color: white;
+   color: #eee;
    text-transform: uppercase;
    font-family: 'Montserrat', sans-serif;
    font-weight: 600;
-   background-color: #D32F2F;
+   background-color: #573b8a;
    transition: all linear 0.15s;
+   box-shadow: 5px 20px 50px #000;
 }
 
 
 
 button:hover {
-   background-color: #F44336;
+   background-color: #6d44b8;
 }
