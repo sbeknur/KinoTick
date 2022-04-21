@@ -34,13 +34,17 @@ select:hover {
    grid-gap: 50px 30px;
 }
 
-.card__film {
+.films__inner li {
+   flex: 1;
+   list-style: none;
    display: flex;
    text-align: center;
    flex-direction: column;
    text-align: center;
    width: 218px;
 }
+
+.card__film {}
 
 .card__info {
    margin-bottom: auto;
