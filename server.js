@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(bodyParser.json())
 app.use('/user', UserRoute)
-const dbConfig = require('./config/database.config.js')
+const dbConfig = require('./config/database.config')
 const res = require("express/lib/response");
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.url, {
