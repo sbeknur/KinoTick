@@ -4,6 +4,8 @@ const path = require('path')
 
 router
     .route('/')
-    .get((req, res) => res.render(path.resolve('views/signup.ejs')))
+    .get((req, res) => res.render(path.resolve('views/signup.ejs'), {
+        title: 'Sign'
+    }))
 
 module.exports = router

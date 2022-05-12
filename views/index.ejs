@@ -29,7 +29,7 @@
                             <a href="signup" target="_blank">Sign Up</a>
                         </li>
                         <li class="nav__link">
-                            <a href="login" target="_blank">Login</a>
+                            <a href="signup" target="_blank">Login</a>
                         </li>
                     </ul>
                 </nav>
@@ -78,17 +78,19 @@
                 <p>Скоро на экранах</p>
             </div>
             <div class="films__inner">
-                <%if(film != '') {%>
-                <%film.forEach(element => {%>
-                <div class="card__info">
-                    <img src="<%=element.img%>" alt="" class="card__image">
-                    <p class="card__name"><%=element.title%></p>
-                </div>
-                <button class="btn btn-schedule">Schedule</button>
-                <%})%>
-                <%}else{%>
-                <h6>List is empty</h6>
-                <%}%>
+                    <%if(film != '') {%>
+                    <%film.forEach(element => {%>
+                    <div class="film__info">
+                        <div class="card__info">
+                            <img src="<%=element.img%>" alt="" class="card__image">
+                            <p class="card__name"><%=element.title%></p>
+                        </div>
+                        <button class="btn btn-schedule">Schedule</button>
+                    </div>
+                    <%})%>
+                    <%}else{%>
+                    <h6>List is empty</h6>
+                    <%}%>
             </div>
         </div>
     </main>

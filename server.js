@@ -1,10 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const exphbs = require("express-handlebars");
+const ejs = require('ejs')
 const app = express();
-const port = 3000;
-const bodyParser = require('body-parser');
-const UserRoute = require('./routes/userRoute');
+const PORT = 3000;
 
 
 const hbs = exphbs.create({
@@ -12,39 +11,31 @@ const hbs = exphbs.create({
     extname: 'hbs'
 })
 
-app.use(bodyParser.urlencoded({
-    extended: true
-}))
-app.use(bodyParser.json())
-app.use('/user', UserRoute)
-const dbConfig = require('./config/database.config')
-const res = require("express/lib/response");
-mongoose.Promise = global.Promise;
-mongoose.connect(dbConfig.url, {
-    useNewUrlParser: true
-}).then(() => {
-    console.log("Database Connected Successfully!");
-}).catch(err => {
-    console.log('Could not connect to the database', err);
-    process.exit();
-});
 
-
-app.set('view engine', 'ejs');
+app.set('view engine', ejs);
 app.engine('ejs', require('ejs').__express);
 
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 
 app.use(express.static('public'))
-
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 
 app.use('/', require('./routes/indexRoute'))
 app.use('/about', require('./routes/aboutRoute'))
 app.use('/signup', require('./routes/signupRoute'))
-app.use('/login', require('./routes/loginRoute'))
+app.use('/admin', require('./routes/adminRoute'))
 
+const start = async () => {
+    try {
+        await mongoose.connect('mongodb+srv://sbeknur:qwerty123@cluster0.im96e.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+        app.listen(process.env.PORT || PORT, () =>
+            console.log(`App listening at localhost: ${PORT}`)
+        )
+    } catch (e) {
+        console.log(e)
+    }
+}
 
-app.listen(port, () =>
-    console.log(`App listening at http://localhost:${port}`)
-);
+start()

@@ -28,7 +28,7 @@
    grid-gap: 50px 30px;
 }
 
-.films__inner li {
+.film__info {
    flex: 1;
    list-style: none;
    display: flex;

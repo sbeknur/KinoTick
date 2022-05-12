@@ -1,11 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const path = require('path')
-const http = require('http')
 const filmModel = require('../models/filmModel')
+const path = require('path')
 
-
-let currency
 router
     .route('/')
     .get(async (req, res) => {
