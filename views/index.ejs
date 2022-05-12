@@ -78,30 +78,30 @@
                 <p>Скоро на экранах</p>
             </div>
             <div class="films__inner">
-                    <%if(film != '') {%>
-                    <%film.forEach(element => {%>
-                    <div class="film__info">
-                        <div class="card__info">
-                            <img src="<%=element.img%>" alt="" class="card__image">
-                            <p class="card__name"><%=element.title%></p>
-                        </div>
-                        <button class="btn btn-schedule">Schedule</button>
+                <%if(film != '') {%>
+                <%film.forEach(element => {%>
+                <div class="film__info">
+                    <div class="card__info">
+                        <img src="<%=element.img%>" alt="" class="card__image">
+                        <p class="card__name"><%=element.title%></p>
                     </div>
-                    <%})%>
-                    <%}else{%>
-                    <h6>List is empty</h6>
-                    <%}%>
+                    <button class="btn btn-schedule">Schedule</button>
+                </div>
+                <%})%>
+                <%}else{%>
+                <h6>List is empty</h6>
+                <%}%>
             </div>
         </div>
     </main>
 
-    <!-- <footer class="footer">
-            <div class="container">
-                <div class="footer__inner">
-                    Все права защищены
-                </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                Все права защищены
             </div>
-        </footer> -->
+        </div>
+    </footer>
 
     <script src="scripts/index.js"></script>
 </body>
