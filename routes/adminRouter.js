@@ -7,7 +7,7 @@ router
     .route('/')
     .get((req, res) => res.render(path.resolve('views/admin.ejs'), {
         title: 'Admin page',
-        activePage: 'index'
+        activePage: 'home',
     }))
 
 router.post('/addFilm', filmController.addFilm)
